@@ -51,10 +51,7 @@ public:
     // If requestedSize is > 0, the returned MediaBuffer should have buffer
     // size of at least requstedSize.
     status_t acquire_buffer(
-            MediaBuffer **buffer, bool nonBlocking, size_t requestedSize);
-
-    status_t acquire_buffer(MediaBuffer **buffer);
-    status_t acquire_buffer(MediaBuffer **buffer, bool nonBlocking);
+            MediaBuffer **buffer, bool nonBlocking = false, size_t requestedSize = 0);
 
     size_t buffers() const { return mBuffers.size(); }
 
